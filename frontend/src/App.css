@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #202b3c;
+    color: white;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    color: #d5dce5;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #34445c;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card h3 {
+    color: #555;
+    font-size: 15px;
+}
+
+.dashboard-card h2 {
+    margin-top: 15px;
+    font-size: 30px;
+    color: #202b3c;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.employee-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.employee-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #202b3c;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+}
+
+button:hover {
+    background: #34445c;
+}
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #202b3c;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .employee-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.employee-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+.error-message {
+    color: #dc2626;
+    background: #fee2e2;
+    padding: 15px;
+    border-radius: 6px;
+}
