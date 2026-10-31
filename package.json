@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "concurrently -k -n BACKEND,RECOMMEND,FRONTEND \"cd backend && mvnw.cmd -Dmaven.test.skip=true spring-boot:run\" \"python backend-recommendation/main.py\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "cd backend && mvnw.cmd -Dmaven.test.skip=true spring-boot:run",
+    "dev:recommend": "python backend-recommendation/main.py",
+    "dev:frontend": "npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}

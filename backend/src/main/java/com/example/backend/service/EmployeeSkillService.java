@@ -27,6 +27,10 @@ public class EmployeeSkillService {
         return repository.findById(id).orElse(null);
     }
 
+    public List<EmployeeSkill> getEmployeeSkillsByEmployeeId(Long employeeId) {
+        return repository.findByEmployeeId(employeeId);
+    }
+
     public EmployeeSkill updateEmployeeSkill(Long id, EmployeeSkill employeeSkill) {
         EmployeeSkill old = repository.findById(id).orElse(null);
 

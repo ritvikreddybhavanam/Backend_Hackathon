@@ -32,6 +32,11 @@ public class EmployeeSkillController {
         return service.getEmployeeSkill(id);
     }
 
+    @GetMapping("/employee/{employeeId}")
+    public List<EmployeeSkill> getEmployeeSkillsByEmployeeId(@PathVariable Long employeeId) {
+        return service.getEmployeeSkillsByEmployeeId(employeeId);
+    }
+
     @PutMapping("/{id}")
     public EmployeeSkill updateEmployeeSkill(@PathVariable Long id, @RequestBody EmployeeSkill employeeSkill) {
         return service.updateEmployeeSkill(id, employeeSkill);

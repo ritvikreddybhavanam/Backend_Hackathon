@@ -7,7 +7,8 @@ function Sidebar() {
         { name: "Skills", path: "/skills" },
         { name: "Employee Skills", path: "/employee-skills" },
         { name: "Certifications", path: "/certifications" },
-        { name: "Trainings", path: "/trainings" }
+        { name: "Trainings", path: "/trainings" },
+        { name: "Skill Gap Analysis", path: "/skill-gap-analysis" }
     ];
 
     return (

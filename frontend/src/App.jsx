@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
@@ -7,6 +6,7 @@ import Skills from "./pages/Skills";
 import EmployeeSkills from "./pages/EmployeeSkills";
 import Certifications from "./pages/Certifications";
 import Trainings from "./pages/Trainings";
+import SkillGapAnalysis from "./pages/SkillGapAnalysis";
 
 function App() {
     return (
@@ -22,6 +22,7 @@ function App() {
                         <Route path="/employee-skills" element={<EmployeeSkills />} />
                         <Route path="/certifications" element={<Certifications />} />
                         <Route path="/trainings" element={<Trainings />} />
+                        <Route path="/skill-gap-analysis" element={<SkillGapAnalysis />} />
                     </Routes>
                 </main>
             </div>
